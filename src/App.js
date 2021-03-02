@@ -13,14 +13,13 @@ function App() {
    const [players, setPlayers] = useState([]);
    const [playersCart, setPlayersCart] = useState([]);
    useEffect(()=>{
-     const playerName = playersData.map(playersData => playersData.name)
-    //  console.log(playerName)
+    //  const playerName = playersData.map(playersData => playersData.name)
+   
     setPlayers(playersData)
     
    }, [])
 
    const handleAddPlayers = (players) => {
-    //  console.log('added',players)
     const newPlayersCart =[ ...playersCart, players]
     setPlayersCart(newPlayersCart);
     }
